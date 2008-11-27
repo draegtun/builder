@@ -1,0 +1,11 @@
+^\.gitignore$
+^\.git\b
+^\.DS_Store
+^_build
+^Build$
+^blib
+~$
+\.bak$
+\.old$
+^MANIFEST\.SKIP$
+CVS

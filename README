@@ -1,0 +1,62 @@
+Builder version 0.01
+
+This distribution includes the following modules:
+
+    Builder             (0.01)
+    Builder::Utils      (0.01)
+    Builder::XML        (0.01)
+    Builder::XML::Utils (0.01)
+    
+
+SYNOPSIS
+
+Using building blocks to render XML, CSS, HTML and other outputs.
+
+    use Builder;
+
+    my $builder = Builder->new();
+
+    my $xm = $builder->block( 'Builder::XML' );
+
+    $xm->body(
+        $xm->div( { id => 'mydiv' }, 
+            $xm->bold( 'hello' ), 
+            $xm->em( 'world' ) 
+        );
+    );
+
+    say $builder->render;
+
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+
+DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+	Carp
+
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Builder
+
+
+COPYRIGHT AND LICENCE
+
+Copyright (C) 2008 Barry Walsh (Draegtun Systems Ltd)
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+

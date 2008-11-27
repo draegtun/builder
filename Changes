@@ -1,0 +1,10 @@
+Revision history for Builder
+
+0.01    Weds November 26, 2008
+    * First ever version on CPAN
+      - Also my first ever CPAN module!
+      - Its a stripped back version as I get use to CPAN ropes
+      - Source code will be on GitHub (using git is also another first for me!)
+      - So will be merging back some newer changes from SVN over next few versions
+      - Including adding back in CSS module
+

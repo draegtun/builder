@@ -1,0 +1,8 @@
+0.01
+    Finish off docs 
+    Add more tests
+    Bring git (GitHub) up-to-date with latest version in my SVN
+    (NB. Above includes CSS module)
+    Add subs saving to Builder::XML (benchmark first)
+    Create Builder::HTML & Builder::HTML::Validated
+    Refactor! Refactor! Refactor!
