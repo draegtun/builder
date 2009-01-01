@@ -2,7 +2,7 @@ use Test::More tests => 4;
 use Builder;
 
 my $builder = Builder->new();
-my $xm = $builder->block( 'Builder::XML', namespace => 'foo', qualifiedAttrib => 0 );
+my $xm = $builder->block( 'Builder::XML', { namespace => 'foo', qualified_attr => 0 } );
 
 my $expected = q{<foo:body><foo:em>emphasized</foo:em><foo:div id="mydiv"><foo:bold>hello</foo:bold><foo:em>world</foo:em></foo:div></foo:body>};
 
@@ -15,7 +15,7 @@ $xm->body( sub {
 is $builder->render, $expected, "xml test 1";
 
 # test2
-my $xm2 = $builder->block( 'Builder::XML', namespace => 'foo', qualifiedAttrib => 1 );
+my $xm2 = $builder->block( 'Builder::XML', { namespace => 'foo', qualified_attr => 1 } );
 $expected = q{<foo:body><foo:em>emphasized</foo:em><foo:div foo:id="mydiv"><foo:bold>hello</foo:bold><foo:em>world</foo:em></foo:div></foo:body>};
 
 $xm2->body( sub {

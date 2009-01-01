@@ -1,5 +1,16 @@
 Revision history for Builder
 
+0.02    Thurs January 1, 2009
+    * Updated test suite & docs.  Minor additions/fixes for new tests to work!
+      - CDATA now fixed
+      - block() method now expects hashref for 2nd arg (ie. named options)
+      - block() named arg changed from qualifiedAttrib to qualified_attr
+      - added builder_xml_pretty.t & builder_xml_output.t
+      - B::XML - added open_newline, close_newline & pre_indent args
+      - Added empty tags, eg. <br />  (tag can be defined with empty_tag arg)
+      - Oh and Happy New Year!
+       
+
 0.01    Weds November 26, 2008
     * First ever version on CPAN
       - Also my first ever CPAN module!

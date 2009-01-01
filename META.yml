@@ -1,6 +1,6 @@
 ---
 name: Builder
-version: 0.01
+version: 0.02
 author:
   - 'Barry Walsh <draegtun@cpan.org>'
 abstract: 'Build XML, HTML, CSS and other outputs in blocks'
@@ -13,16 +13,16 @@ build_requires:
 provides:
   Builder:
     file: lib/Builder.pm
-    version: 0.01
+    version: 0.02
   Builder::Utils:
     file: lib/Builder/Utils.pm
-    version: 0.01
+    version: 0.02
   Builder::XML:
     file: lib/Builder/XML.pm
-    version: 0.01
+    version: 0.02
   Builder::XML::Utils:
     file: lib/Builder/XML/Utils.pm
-    version: 0.01
+    version: 0.02
 generated_by: Module::Build version 0.3
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html

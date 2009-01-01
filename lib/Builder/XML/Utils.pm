@@ -2,7 +2,7 @@ package Builder::XML::Utils;
 use strict;
 use warnings;
 use Carp;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 
 sub build_context {
@@ -16,7 +16,7 @@ sub build_context {
             
             $self->__push__( sub {
                 # start building the return string
-                my $return .= $self->__tab__ . q{<}.$tag;
+                my $return .= $self->__start_tab__ . q{<}.$tag;
                 
                 # any spec attrs?
                 if ( $attr_ref->{ _xmlns_ } ) {
@@ -29,7 +29,7 @@ sub build_context {
                     $return .= sprintf( ' %s%s="%s"', $self->{attr_ns}, $k, $attr_ref->{$k} );  
                 }
                 
-                $return .= q{>} . $self->{cr};
+                $return .= q{>} . $self->__open_newline__;
                 $self->__inc__;
                 
                 return $return;
@@ -43,7 +43,7 @@ sub build_context {
             
             $self->__push__( sub { 
                 $self->__dec__;
-                $self->__tab__ . q{</}.$tag.q{>} . $self->{cr}
+                $self->__end_tab__ . q{</}.$tag.q{>} . $self->__close_newline__;
             });
         },
         
@@ -58,9 +58,13 @@ sub build_context {
                 $attrib .= sprintf( ' %s%s="%s"', $self->{attr_ns}, $k, $param->{attr}->{$k} );  
             }
             
+            return $self->__push__( sub {
+                $self->__tab__ . q{<}.$tag.$attrib.q{>}.$text.q{</}.$tag.q{>} . $self->__close_newline__ 
+            })  if $text;
+            
             $self->__push__( sub {
-                $self->__tab__ . q{<}.$tag.$attrib.q{>}.$text.q{</}.$tag.q{>} . $self->{cr} 
-            });
+                $self->__tab__ . q{<}.$tag.$attrib.$self->{empty_tag} . $self->__close_newline__ 
+            })
         },
     };
     
@@ -72,9 +76,17 @@ sub get_args {
     my ( %arg ) = @_;
     $arg{ns}      = defined $arg{namespace}      ? $arg{namespace} . q{:}         : q{};
     $arg{attr_ns} = defined $arg{attr_namespace} ? ( $arg{attr_namespace} . ':' ) : q{};
-    $arg{attr_ns} = $arg{qualifiedAttrib}        ? $arg{ns}                       : $arg{attr_ns};
-    $arg{cr}      = $arg{ newline }              ? "\n"                           : q{}; 
+    $arg{attr_ns} = $arg{qualified_attr}         ? $arg{ns}                       : $arg{attr_ns};
+    $arg{cr}      = $arg{ newline }              ? "\n" x $arg{ newline }         : q{}; 
     $arg{cdata} ||= 0;   
+    
+    $arg{ open_newline  } = defined $arg{ open_newline }  ? $arg{ open_newline }  : 1;
+    $arg{ close_newline } = defined $arg{ close_newline } ? $arg{ close_newline } : 1;
+    
+    $arg{ pre_indent } ||= 0;
+    
+    $arg{ empty_tag } ||= q{ />};
+    
     return %arg;
 }
 
@@ -88,7 +100,7 @@ Builder::XML::Utils - Internal Builder XML Utils
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
@@ -159,7 +171,7 @@ See L<Builder>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2008 Barry Walsh (Draegtun Systems Ltd), all rights reserved.
+Copyright 2008,2009 Barry Walsh (Draegtun Systems Ltd), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
