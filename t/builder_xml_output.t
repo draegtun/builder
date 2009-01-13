@@ -1,9 +1,18 @@
 use Test::More tests => 2;
 use Builder;
 
+# local test lib
+use lib 't/lib';
+use IO::Scalar;
+
 my $got;
-open my $fh, '>', \$got or die $!;
+
+# below only works in 5.8.* and greater
+# open my $fh, '>', \$got or die $!;  
+ 
+my $fh = IO::Scalar->new( \$got );   # so use IO::Scalar insteead
 my $builder = Builder->new( output => $fh );
+
 my $xm  = $builder->block( 'Builder::XML', { indent => 4, newline => 1 } );
 
 my $expected = 

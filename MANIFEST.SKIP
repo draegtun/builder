@@ -9,3 +9,4 @@
 \.old$
 ^MANIFEST\.SKIP$
 CVS
+.DS_Store

@@ -1,6 +1,6 @@
 ---
 name: Builder
-version: 0.02
+version: 0.03
 author:
   - 'Barry Walsh <draegtun@cpan.org>'
 abstract: 'Build XML, HTML, CSS and other outputs in blocks'
@@ -13,7 +13,7 @@ build_requires:
 provides:
   Builder:
     file: lib/Builder.pm
-    version: 0.02
+    version: 0.03
   Builder::Utils:
     file: lib/Builder/Utils.pm
     version: 0.02
