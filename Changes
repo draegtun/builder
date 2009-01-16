@@ -1,8 +1,13 @@
 Revision history for Builder
 
+0.04    Fri January 16, 2009
+    * Opps... Needed IO::WrapTie as well in builder_xml_output.t test  ;-(
+      - IO::WrapTie from IO::Stringy 2.110 package added in t/lib
+      
+
 0.03    Tues January 13, 2009
     * Test builder_xml_output.t now uses IO::Scalar (in t/lib) so passes on 5.6.*
-      - IO::Stringy 2.110 used in t/lib
+      - IO::Scalar from IO::Stringy 2.110 package used in t/lib
       
 
 0.02    Thurs January 1, 2009

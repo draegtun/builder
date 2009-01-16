@@ -1,8 +1,8 @@
-Builder version 0.03
+Builder version 0.04
 
 This distribution includes the following modules:
 
-    Builder             (0.03)
+    Builder             (0.04)
     Builder::Utils      (0.02)
     Builder::XML        (0.02)
     Builder::XML::Utils (0.02)

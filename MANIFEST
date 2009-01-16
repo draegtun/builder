@@ -16,6 +16,7 @@ t/builder_xml_namespace.t
 t/builder_xml_output.t
 t/builder_xml_pretty.t
 t/lib/IO/Scalar.pm
+t/lib/IO/WrapTie.pm
 t/pod-coverage.t
 t/pod.t
 TODO
