@@ -70,7 +70,6 @@ sub _new_block {
 __END__
 
 
-
 =head1 NAME
 
 Builder - Build XML, HTML, CSS and other outputs in blocks
