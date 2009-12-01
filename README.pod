@@ -19,11 +19,9 @@ This distribution includes the following modules:
 
 Using building blocks to render XML, CSS, HTML and other outputs.
 
-=begin
     use Builder;
     my $builder = Builder->new;
     my $xm      = $builder->block( 'Builder::XML' );
-
 
     # example 1
 
@@ -46,9 +44,6 @@ Using building blocks to render XML, CSS, HTML and other outputs.
         
     # <parent><child>Hi Mum</child><child>Hi Dad</child></parent>
 
-=end
-
-=pod
 
 =head2 INSTALLATION
 
