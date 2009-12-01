@@ -19,21 +19,21 @@ This distribution includes the following modules:
 
 Using building blocks to render XML, CSS, HTML and other outputs.
 
-=head3 boilerplate
-
     use Builder;
     my $builder = Builder->new;
     my $xm      = $builder->block( 'Builder::XML' );
-
-=head3 example 1
-
+    
+     
+    # example 1
+     
     $xm->parent( { isa => 'Mother' }, $xm->child( 'Hi Mum!' ) );
     say $builder->render;
 
     # <parent isa="Mother"><child>Hi Mum!</child></parent>
-
-=head3 example 2
-
+    
+    
+    # example 2
+     
     $xm->parent( sub {
         for my $say qw/Mum Dad/ {
             $xm->child( "Hi $say" );
