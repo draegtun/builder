@@ -1,0 +1,79 @@
+=head1 NAME
+
+Builder 
+
+=head1 VERSION
+
+version 0.04
+
+This distribution includes the following modules:
+
+    Builder             (0.04)
+    Builder::Utils      (0.02)
+    Builder::XML        (0.02)
+    Builder::XML::Utils (0.02)
+    
+
+=head1 SYNOPSIS
+
+Using building blocks to render XML, CSS, HTML and other outputs.
+
+    use Builder;
+    my $builder = Builder->new;
+    my $xm      = $builder->block( 'Builder::XML' );
+
+
+    # example 1
+
+    $xm->parent( { isa => 'Mother' }, $xm->child( 'Hi Mum!' ) );
+
+    say $builder->render;
+
+    # <parent isa="Mother"><child>Hi Mum!</child></parent>
+
+
+    # example 2
+    
+    $xm->parent( sub {
+        for my $say qw/Mum Dad/ {
+            $xm->child( "Hi $say" );
+        }
+    });
+    
+    say $builder->render;
+        
+    # <parent><child>Hi Mum</child><child>Hi Dad</child></parent>
+
+
+=head1 INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Build.PL
+	./Build
+	./Build test
+	./Build install
+
+
+=head1 DEPENDENCIES
+
+This module requires these other modules and libraries:
+
+	Carp
+
+
+=head1 SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Builder
+
+
+=head1 COPYRIGHT AND LICENCE
+
+Copyright (C) 2008,2009 Barry Walsh (Draegtun Systems Ltd)
+
+This program is free software; you can redistribute it and/or modify it
+under the same terms as Perl itself.
+
