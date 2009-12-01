@@ -48,6 +48,8 @@ Using building blocks to render XML, CSS, HTML and other outputs.
 
 =end
 
+=pod
+
 =head2 INSTALLATION
 
 To install this module, run the following commands:
