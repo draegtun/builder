@@ -23,12 +23,12 @@ Using building blocks to render XML, CSS, HTML and other outputs.
     my $builder = Builder->new;
     my $xm      = $builder->block( 'Builder::XML' );
     
-     
+    
     # example 1
      
     $xm->parent( { isa => 'Mother' }, $xm->child( 'Hi Mum!' ) );
     say $builder->render;
-
+    
     # <parent isa="Mother"><child>Hi Mum!</child></parent>
     
     
