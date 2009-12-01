@@ -27,7 +27,6 @@ Using building blocks to render XML, CSS, HTML and other outputs.
     # example 1
     
     $xm->parent( { isa => 'Mother' }, $xm->child( 'Hi Mum!' ) );
-
     say $builder->render;
 
     # <parent isa="Mother"><child>Hi Mum!</child></parent>
