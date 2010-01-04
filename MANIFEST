@@ -8,6 +8,7 @@ Makefile.PL
 MANIFEST
 META.yml
 README
+README.pod
 t/00-load.t
 t/boilerplate.t
 t/builder_xml_basic.t
