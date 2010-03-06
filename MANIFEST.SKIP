@@ -12,3 +12,4 @@ CVS
 .DS_Store
 pod2htmd.tmp
 pod2htmi.tmp
+^MYMETA.yml$

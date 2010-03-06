@@ -5,7 +5,7 @@ Build XML, HTML and (eventually!) other outputs in blocks
 
 =head2 VERSION
 
-version 0.04
+version 0.05
 
 This distribution includes the following modules:
 

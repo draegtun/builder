@@ -1,6 +1,6 @@
 Revision history for Builder
 
-0.05	Current (not on CPAN)
+0.05	Sat March 6, 2010
 	* Minor tidying up
 	  - Build.PL now has repo meta tag
 	
