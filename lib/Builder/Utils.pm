@@ -2,7 +2,7 @@ package Builder::Utils;
 use strict;
 use warnings;
 use Carp;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 
 # common utilities put here and not exported into Builder::* because it would pollute namespace (ie. tags!)
@@ -34,7 +34,7 @@ Builder::Utils - Internal Builder Utils
 
 =head1 VERSION
 
-Version 0.02
+Version 0.03
 
 =cut
 
@@ -51,6 +51,8 @@ None.
 =head1 FUNCTIONS
 
 =head2 yank
+
+Yank out requested elements (prescribed by anon sub) from an array... returning whats been yanked.
 
 
 =head1 AUTHOR
@@ -103,7 +105,7 @@ See L<Builder>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2008,2009 Barry Walsh (Draegtun Systems Ltd), all rights reserved.
+Copyright 2008-2010 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

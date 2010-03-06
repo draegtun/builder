@@ -1,5 +1,10 @@
 Revision history for Builder
 
+0.05	Current (not on CPAN)
+	* Minor tidying up
+	  - Build.PL now has repo meta tag
+	
+
 0.04    Fri January 16, 2009
     * Opps... Needed IO::WrapTie as well in builder_xml_output.t test  ;-(
       - IO::WrapTie from IO::Stringy 2.110 package added in t/lib

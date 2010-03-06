@@ -9,10 +9,10 @@ version 0.04
 
 This distribution includes the following modules:
 
-    Builder             (0.04)
-    Builder::Utils      (0.02)
-    Builder::XML        (0.02)
-    Builder::XML::Utils (0.02)
+    Builder             (0.05)
+    Builder::Utils      (0.03)
+    Builder::XML        (0.03)
+    Builder::XML::Utils (0.03)
     
 
 =head2 SYNOPSIS
@@ -72,7 +72,7 @@ perldoc command.
 
 =head2 COPYRIGHT AND LICENCE
 
-Copyright (C) 2008,2009 Barry Walsh (Draegtun Systems Ltd)
+Copyright 2008-2010 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
