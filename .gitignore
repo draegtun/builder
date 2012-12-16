@@ -13,3 +13,5 @@ pod2htmd.tmp
 pod2htmi.tmp
 MANIFEST.bak
 META.yml
+*.swp
+*.un~

@@ -4,7 +4,7 @@ use warnings;
 use Carp;
 use Builder::Utils;
 use Builder::XML::Utils;
-our $VERSION = '0.03';
+our $VERSION = '0.06';
 our $AUTOLOAD;
 
 
@@ -159,10 +159,7 @@ Builder::XML - Building block for XML
 
 =head1 VERSION
 
-Version 0.03
-
-=cut
-
+Version 0.06
 
 
 =head1 SYNOPSIS
@@ -420,11 +417,8 @@ L<http://search.cpan.org/dist/Builder/>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2008-2010 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
+Copyright 2008-2013 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
-
-
-=cut
 

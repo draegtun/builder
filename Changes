@@ -1,8 +1,14 @@
 Revision history for Builder
 
+0.06    Sun December 16th 2012
+    * Amended t/builder_xml_pretty.t
+      - Test got hit by hash randomisation change at 5.17.6 (for perl 5.18) :(
+      - Fixed by just removing multiple attributes from test :)
+
+
 0.05	Sat March 6, 2010
-	* Minor tidying up
-	  - Build.PL now has repo meta tag
+    * Minor tidying up
+      - Build.PL now has repo meta tag
 	
 
 0.04    Fri January 16, 2009

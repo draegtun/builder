@@ -43,7 +43,7 @@ my $n  = $builder->block( 'Builder::XML' );
 my @issues = ('My Active Issues', 'All Active Issues', 'Unassigned Issues', 'Closed Issues' );
 
 $xm->div( 
-    { id => 'dash-actions', class => 'section' },
+    { id => 'dash-actions' },
     
     $xm->h1( 'Action Planning' ),
     
@@ -80,7 +80,7 @@ $xm->div(
 
 
 $expected = 
-q{<div class="section" id="dash-actions">
+q{<div id="dash-actions">
     <h1>Action Planning</h1>
     <div id="myTabs">
         <ul>
@@ -114,7 +114,7 @@ is $builder->render, $expected, "xml pretty test 3 failed";
 # test 4
 
 my $h  = $builder->block( 'Builder::XML', { pre_indent => 4, indent => 4, newline => 1 } );
-$h->one( $h->inside_one( { a => 1, b => 2 } ), $h->also_inside_one );
+$h->one( $h->inside_one( {a => 1} ), $h->also_inside_one );
 my $one = $h->__render__;
 
 $xm->ONE( $xm->pre, $one, $xm->post );
@@ -123,7 +123,7 @@ $expected =
 q{<ONE>
     <pre />
     <one>
-        <inside_one a="1" b="2" />
+        <inside_one a="1" />
         <also_inside_one />
     </one>
     <post />

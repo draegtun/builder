@@ -2,8 +2,7 @@ package Builder::XML::Utils;
 use strict;
 use warnings;
 use Carp;
-our $VERSION = '0.03';
-
+our $VERSION = '0.06';
 
 sub build_context {
     
@@ -96,19 +95,12 @@ __END__
 
 =head1 NAME
 
-Builder::XML::Utils - Internal Builder XML Utils
-
-=head1 VERSION
-
-Version 0.03
-
-=cut
-
+Builder::XML::Utils - Internal Builder XML Utility functions
 
 
 =head1 SYNOPSIS
 
-TBD
+NB. No need to use this module directly.
 
 =head1 EXPORT
 
@@ -171,7 +163,7 @@ See L<Builder>
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2008-2010 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
+Copyright 2008-2013 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

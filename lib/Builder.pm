@@ -2,7 +2,7 @@ package Builder;
 use strict;
 use warnings;
 use Carp;
-our $VERSION = '0.05';
+our $VERSION = '0.06';
 
 
 sub new {
@@ -76,8 +76,7 @@ Builder - Build XML, HTML, CSS and other outputs in blocks
 
 =head1 VERSION
 
-Version 0.05
-
+Version 0.06
 
 
 =head1 SYNOPSIS
@@ -317,7 +316,7 @@ However I accept no liability I<whatsoever> should this software do what you exp
 
 =head1 COPYRIGHT & LICENSE
 
-Copyright 2008-2010 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
+Copyright 2008-2013 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
