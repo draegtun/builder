@@ -1,16 +1,10 @@
 Build.PL
 Changes
-lib/.Builder.pm.swp
 lib/Builder.pm
-lib/Builder/.Utils.pm.swp
-lib/Builder/.XML.pm.swp
 lib/Builder/Utils.pm
 lib/Builder/XML.pm
-lib/Builder/XML/.Utils.pm.swp
 lib/Builder/XML/Utils.pm
-Makefile.PL
 MANIFEST
-META.yml
 README
 README.pod
 t/00-load.t
@@ -25,3 +19,5 @@ t/lib/IO/WrapTie.pm
 t/pod-coverage.t
 t/pod.t
 TODO
+META.yml
+META.json

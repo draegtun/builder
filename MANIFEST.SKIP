@@ -14,3 +14,4 @@ pod2htmd.tmp
 pod2htmi.tmp
 ^MYMETA.yml$
 ^MYMETA\.json$
+\.swp$
