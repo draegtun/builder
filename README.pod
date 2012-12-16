@@ -5,14 +5,14 @@ Build XML, HTML and (eventually!) other outputs in blocks
 
 =head2 VERSION
 
-version 0.05
+version 0.06
 
 This distribution includes the following modules:
 
-    Builder             (0.05)
-    Builder::Utils      (0.03)
-    Builder::XML        (0.03)
-    Builder::XML::Utils (0.03)
+    Builder             (0.06)
+    Builder::Utils      (0.06)
+    Builder::XML        (0.06)
+    Builder::XML::Utils (0.06)
     
 
 =head2 SYNOPSIS
@@ -72,7 +72,7 @@ perldoc command.
 
 =head2 COPYRIGHT AND LICENCE
 
-Copyright 2008-2010 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
+Copyright 2008-2013 Barry Walsh (Draegtun Systems Ltd | L<http://www.draegtun.com>), all rights reserved.
 
 This program is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
